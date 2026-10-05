@@ -51,8 +51,12 @@ Procesarlas con el pipeline de Pillow del proyecto Lacats Amengual (recorte, mej
 - **Cómo trabajo**: la línea entre los pasos se dibuja al aparecer en pantalla.
 - Todo respeta `prefers-reduced-motion`.
 
-## Despliegue (pendiente)
+## Despliegue
 
-1. Repositorio en GitHub, conectado a Netlify (sin build, publicar la raíz).
-2. **Crear la notificación por email del formulario** (Netlify no la crea sola, ver el playbook de Netlify).
-3. Dominio + SSL, Search Console, Google Business Profile.
+- Netlify: sitio `pinturas-lacados-pf` (id `d3e6570b-15bd-4d07-ab05-f98365a8f65a`), https://pinturas-lacados-pf.netlify.app
+- Despliegue automático: cada push a `main` en GitHub publica la web (sin build, se publica la raíz).
+- Formulario `contacto` registrado en Netlify Forms y probado con un envío real.
+
+Pendiente:
+1. **Crear la notificación por email del formulario**: Netlify guarda los envíos pero no avisa a nadie si no se crea el hook (ver el playbook de Netlify).
+2. Dominio + SSL, Search Console, Google Business Profile.
