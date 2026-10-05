@@ -1,0 +1,8 @@
+{
+  "name": "Pinturas y Lacados PF",
+  "short_name": "Lacados PF",
+  "icons": [{ "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#2A40C9",
+  "background_color": "#F3F4F2",
+  "display": "browser"
+}
