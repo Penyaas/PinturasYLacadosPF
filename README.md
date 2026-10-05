@@ -32,10 +32,12 @@ Busca `PENDIENTE` en el código y `class="pending"` en las páginas legales.
 | Nombre completo, NIF, dirección fiscal | las tres páginas legales |
 | Dominio (ahora `pinturasylacadospf.es`) | `canonical` y `og:url` de cada página, `robots.txt`, `sitemap.xml` |
 | Fotos | ver abajo |
+| Reseñas de Google | hueco marcado con `PENDIENTE` antes de las preguntas frecuentes; añadir también `aggregateRating` real al JSON-LD |
+| Años de experiencia, horario | opcional: si los da, añadirlos al texto y al JSON-LD (`openingHoursSpecification`) |
 
 ## Fotos
 
-Ahora mismo la web no usa fotografías: la puerta del inicio, las muestras de color y el mueble de "Antes y después" están hechos con CSS.
+Ahora mismo la web no usa fotografías: la puerta del inicio, las muestras de color y el mueble de "Antes y después" están hechos con CSS. La imagen para compartir (`assets/og-image.jpg`) es una captura de la portada; cámbiala por una foto real cuando la haya.
 
 Cuando lleguen las fotos reales:
 1. **Antes y después**: sustituir el contenido de `.compare-before` y `.compare-after` por un `<img>` de cada foto (mismo encuadre en las dos). El control deslizante funciona igual.
@@ -56,6 +58,9 @@ Procesarlas con el pipeline de Pillow del proyecto Lacats Amengual (recorte, mej
 - Netlify: sitio `pinturas-lacados-pf` (id `d3e6570b-15bd-4d07-ab05-f98365a8f65a`), https://pinturas-lacados-pf.netlify.app
 - Despliegue automático: cada push a `main` en GitHub publica la web (sin build, se publica la raíz).
 - Formulario `contacto` registrado en Netlify Forms y probado con un envío real.
+- Revisar de vez en cuando la carpeta **Spam** del formulario en Netlify: los envíos marcados como spam no disparan la notificación por email.
+- Cabeceras de seguridad y caché en `netlify.toml`. El distintivo "Built with Netlify" está desactivado (inyectaba un script que la CSP bloquea).
+- Lighthouse móvil (2026-10-05): rendimiento 97, accesibilidad 100, buenas prácticas 100, SEO 100.
 
 Pendiente:
 1. **Crear la notificación por email del formulario**: Netlify guarda los envíos pero no avisa a nadie si no se crea el hook (ver el playbook de Netlify).
