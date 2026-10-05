@@ -213,7 +213,6 @@
         [form.querySelector("#contact-name"), function (f) { return f.value.trim() ? "" : "Indica tu nombre."; }],
         [form.querySelector("#contact-phone"), function (f) { return f.value.replace(/\D/g, "").length >= 9 ? "" : "Indica un teléfono válido (al menos 9 dígitos)."; }],
         [form.querySelector("#contact-type"), function (f) { return f.value ? "" : "Elige el tipo de trabajo."; }],
-        [form.querySelector("#contact-message"), function (f) { return f.value.trim() ? "" : "Cuéntame brevemente qué necesitas."; }],
         [form.querySelector("#contact-privacy"), function (f) { return f.checked ? "" : "Necesito tu permiso para responderte."; }]
       ];
       var firstInvalid = null;

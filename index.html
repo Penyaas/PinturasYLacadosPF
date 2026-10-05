@@ -3,22 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lacado de puertas, cocinas y muebles y pintura en Mallorca | Pinturas y Lacados PF</title>
-<meta name="description" content="Lacador y pintor autónomo en Mallorca, con base en Porto Cristo (Manacor). Lacado de puertas, cocinas, persianas y muebles en cualquier color RAL, y pintura de interior y exterior. Presupuesto sin compromiso.">
+<title>Lacado de puertas y cocinas, pintura en Mallorca | Pinturas y Lacados PF</title>
+<meta name="description" content="Lacado de puertas, cocinas, persianas y muebles, y pintura interior y exterior en toda Mallorca. Autónomo con base en Porto Cristo. Presupuesto sin compromiso.">
 <!-- PENDIENTE: cambiar el dominio cuando esté comprado (aquí, en las páginas legales, robots.txt y sitemap.xml) -->
 <link rel="canonical" href="https://www.pinturasylacadospf.es/">
 
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3F4F2">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1012">
 <meta name="color-scheme" content="light dark">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
 <meta property="og:type" content="website">
@@ -27,38 +26,239 @@
 <meta property="og:description" content="Lacado de puertas, cocinas, persianas y muebles. Pintura de interior y exterior en toda Mallorca. Presupuesto sin compromiso.">
 <meta property="og:url" content="https://www.pinturasylacadospf.es/">
 <meta property="og:site_name" content="Pinturas y Lacados PF">
-<!-- PENDIENTE: og:image (1200x630) cuando haya fotos reales -->
+<meta property="og:image" content="https://www.pinturasylacadospf.es/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pinturas y Lacados PF: lacados con acabado de fábrica, en tu casa. Teléfono 665 01 31 39.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.pinturasylacadospf.es/assets/og-image.jpg">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Pinturas y Lacados PF",
-  "description": "Lacado de puertas, cocinas, persianas y muebles. Pintura de interior y exterior en toda Mallorca.",
-  "url": "https://www.pinturasylacadospf.es/",
-  "telephone": "+34665013139",
-  "priceRange": "€€",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Porto Cristo",
-    "addressRegion": "Illes Balears",
-    "postalCode": "07680",
-    "addressCountry": "ES"
-  },
-  "areaServed": { "@type": "AdministrativeArea", "name": "Mallorca" },
-  "knowsAbout": ["Lacado de puertas", "Lacado de cocinas", "Lacado de persianas", "Lacado de muebles", "Teñido y barnizado de madera", "Pintura de interiores", "Pintura de exteriores"]
+  "@graph": [
+    {
+      "@type": "HousePainter",
+      "@id": "https://www.pinturasylacadospf.es/#negocio",
+      "name": "Pinturas y Lacados PF",
+      "url": "https://www.pinturasylacadospf.es/",
+      "description": "Lacador y pintor autónomo. Lacado de puertas, cocinas, persianas y muebles, y pintura de interior y exterior en toda Mallorca.",
+      "telephone": "+34665013139",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Porto Cristo",
+        "addressRegion": "Illes Balears",
+        "postalCode": "07680",
+        "addressCountry": "ES"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Mallorca"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34665013139",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "es"
+        ]
+      },
+      "knowsAbout": [
+        "Lacado de puertas",
+        "Lacado de cocinas",
+        "Lacado de persianas",
+        "Lacado de muebles",
+        "Teñido y barnizado de madera",
+        "Pintura de interiores",
+        "Pintura de exteriores"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lacado de puertas",
+              "description": "Lacado de puertas de paso y armarios en cualquier color RAL o NCS, con desmontaje y montaje incluidos.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lacado de cocinas",
+              "description": "Lacado de frentes de cocina para cambiar su color sin cambiar los muebles.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lacado de persianas",
+              "description": "Lacado de persianas de madera y aluminio, lamas, contraventanas y carpintería exterior.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lacado de muebles",
+              "description": "Lacado de muebles y armarios en acabado mate, satinado o brillo.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Teñido y barnizado de madera",
+              "description": "Teñido y barnizado para mantener la veta de la madera en el tono elegido.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pintura de interiores",
+              "description": "Pintura de paredes y techos.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pintura de exteriores",
+              "description": "Pintura de fachadas, paredes exteriores, barandillas, rejas y vallas.",
+              "areaServed": {
+                "@type": "AdministrativeArea",
+                "name": "Mallorca"
+              }
+            }
+          }
+        ]
+      },
+      "image": "https://www.pinturasylacadospf.es/assets/og-image.jpg",
+      "logo": "https://www.pinturasylacadospf.es/assets/apple-touch-icon.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pinturasylacadospf.es/#web",
+      "url": "https://www.pinturasylacadospf.es/",
+      "name": "Pinturas y Lacados PF",
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@id": "https://www.pinturasylacadospf.es/#negocio"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.pinturasylacadospf.es/#preguntas",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Compensa lacar en vez de cambiar la cocina o las puertas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normalmente sí. Se conservan los muebles, las bisagras y la instalación, y solo se renueva el acabado, así que suele costar bastante menos que cambiarlos y no hay obra. En la visita te digo si tu caso lo merece."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre lacar y pintar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El lacado se aplica a pistola en varias capas sobre una superficie lijada e imprimada. Deja un acabado liso, duro y uniforme, ideal para puertas, cocinas y muebles. La pintura es para paredes, techos y fachadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que desmontar yo las puertas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Yo desmonto las puertas, frentes o persianas, me los llevo al taller y los vuelvo a montar cuando están terminados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo estaré sin las puertas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la cantidad de piezas y del acabado. En el presupuesto te indico un plazo concreto para que puedas organizarte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo elegir cualquier color?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajo con cartas RAL y NCS y en acabado mate, satinado o brillo. Si lo prefieres, también tiño y barnizo para mantener la veta de la madera."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿También pintas exteriores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Fachadas, paredes exteriores, barandillas, rejas, vallas y carpintería exterior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué zonas trabajas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En toda Mallorca: de Porto Cristo y Manacor a Palma, Inca, Alcúdia, Felanitx o Llucmajor. Tengo una furgoneta grande para recoger y devolver puertas, frentes y muebles donde estés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El presupuesto tiene algún coste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Voy a ver el trabajo y te doy un presupuesto sin compromiso."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
 <body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><!-- Iconos Phosphor (regular), licencia MIT --><symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol><symbol id="i-arrows-left-right" viewBox="0 0 256 256"><path d="M213.66,181.66l-32,32a8,8,0,0,1-11.32-11.32L188.69,184H48a8,8,0,0,1,0-16H188.69l-18.35-18.34a8,8,0,0,1,11.32-11.32l32,32A8,8,0,0,1,213.66,181.66Zm-139.32-64a8,8,0,0,0,11.32-11.32L67.31,88H208a8,8,0,0,0,0-16H67.31L85.66,53.66A8,8,0,0,0,74.34,42.34l-32,32a8,8,0,0,0,0,11.32Z"/></symbol><symbol id="i-caret-down" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol><symbol id="i-check-circle" viewBox="0 0 256 256"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></symbol><symbol id="i-door" viewBox="0 0 256 256"><path d="M232,216H208V40a16,16,0,0,0-16-16H64A16,16,0,0,0,48,40V216H24a8,8,0,0,0,0,16H232a8,8,0,0,0,0-16ZM64,40H192V216H64Zm104,92a12,12,0,1,1-12-12A12,12,0,0,1,168,132Z"/></symbol><symbol id="i-envelope-simple" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol><symbol id="i-house-line" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"/></symbol><symbol id="i-list" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol><symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol><symbol id="i-paint-roller" viewBox="0 0 256 256"><path d="M232,88H216V64a16,16,0,0,0-16-16H48A16,16,0,0,0,32,64V88H16a8,8,0,0,0,0,16H32v24a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V104h16v50L131.6,182.65A16.07,16.07,0,0,0,120,198v34a8,8,0,0,0,16,0V198l100.4-28.68A16.07,16.07,0,0,0,248,154V104A16,16,0,0,0,232,88Zm-32,40H48V64H200v64Z"/></symbol><symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol><symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol><symbol id="i-receipt" viewBox="0 0 256 256"><path d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z"/></symbol><symbol id="i-screwdriver" viewBox="0 0 256 256"><path d="M205.66,50.32a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32-11.31l56-56A8,8,0,0,1,205.66,50.32ZM248,58.41a50.13,50.13,0,0,1-14.77,35.66L180,147.3A15.86,15.86,0,0,1,168.69,152H152v16.83a16,16,0,0,1-3.25,9.66,8.08,8.08,0,0,1-.72.83l-8,8a16,16,0,0,1-22.62,0L98.7,168.6l-77,77.06a8,8,0,0,1-11.32-11.32l77.05-77.05-18.7-18.71a16,16,0,0,1,0-22.63l8-8a8,8,0,0,1,.82-.72A16.14,16.14,0,0,1,87.17,104H104V87.3A15.92,15.92,0,0,1,108.68,76l53.24-53.23A50.43,50.43,0,0,1,248,58.41Zm-16,0a34.43,34.43,0,0,0-58.77-24.35L120,87.3V104a16,16,0,0,1-16,16H87.28L80,127.27,128.72,176l7.28-7.28V152a16,16,0,0,1,16-16h16.69l53.23-53.24A34.21,34.21,0,0,0,232,58.41Z"/></symbol><symbol id="i-spray-bottle" viewBox="0 0 256 256"><path d="M200,80a8,8,0,0,0,8-8,56.06,56.06,0,0,0-56-56H80A16,16,0,0,0,64,32V80a24,24,0,0,1-24,24,8,8,0,0,0,0,16A40,40,0,0,0,80,80h32v24.62a23.87,23.87,0,0,1-9,18.74L87,136.15a39.79,39.79,0,0,0-15,31.23V224a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V211.47A270.88,270.88,0,0,0,174,80ZM80,32h72a40.08,40.08,0,0,1,39.2,32H80ZM192,211.47V224H88V167.38a23.87,23.87,0,0,1,9-18.74l16-12.79a39.79,39.79,0,0,0,15-31.23V80h27.52A254.86,254.86,0,0,1,192,211.47Z"/></symbol><symbol id="i-user" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></symbol><symbol id="i-van" viewBox="0 0 256 256"><path d="M254.07,106.79,208.53,53.73A16,16,0,0,0,196.26,48H32A16,16,0,0,0,16,64V176a16,16,0,0,0,16,16H49a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V112A8,8,0,0,0,254.07,106.79ZM230.59,104H176V64h20.26ZM104,104V64h56v40ZM88,64v40H32V64ZM80,200a16,16,0,1,1,16-16A16,16,0,0,1,80,200Zm112,0a16,16,0,1,1,16-16A16,16,0,0,1,192,200Zm31-24a32,32,0,0,0-62,0H111a32,32,0,0,0-62,0H32V120H240v56Z"/></symbol><symbol id="i-whatsapp-logo" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol><symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol></svg>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="#inicio" aria-label="Pinturas y Lacados PF, ir al inicio">
+    <a class="brand" href="#inicio">
       <span class="brand-mark" aria-hidden="true">PF</span>
-      <span class="brand-text">
+      <span class="brand-text" translate="no">
         <span class="brand-name">Pinturas y Lacados</span>
         <span class="brand-sub">PF</span>
       </span>
@@ -75,10 +275,10 @@
 
     <div class="header-actions">
       <a class="btn btn-primary btn-sm header-cta" href="#contacto">Pedir presupuesto</a>
-      <a class="header-call" href="tel:+34665013139" aria-label="Llamar al 665 01 31 39"><i class="ph ph-phone" aria-hidden="true"></i></a>
+      <a class="header-call" href="tel:+34665013139" aria-label="Llamar al 665 01 31 39"><i class="ico ph-phone" aria-hidden="true"><svg><use href="#i-phone"/></svg></i></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menú">
-        <i class="ph ph-list icon-open" aria-hidden="true"></i>
-        <i class="ph ph-x icon-close" aria-hidden="true"></i>
+        <i class="ico ph-list icon-open" aria-hidden="true"><svg><use href="#i-list"/></svg></i>
+        <i class="ico ph-x icon-close" aria-hidden="true"><svg><use href="#i-x"/></svg></i>
       </button>
     </div>
   </div>
@@ -90,7 +290,7 @@
   <a href="#proceso">Cómo trabajo</a>
   <a href="#preguntas">Preguntas</a>
   <a class="btn btn-primary" href="#contacto">Pedir presupuesto</a>
-  <a class="btn btn-ghost" href="https://wa.me/34665013139" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Escribir por WhatsApp</a>
+  <a class="btn btn-ghost" href="https://wa.me/34665013139?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20quer%C3%ADa%20pedir%20presupuesto%20para%3A%20" target="_blank" rel="noopener"><i class="ico ph-whatsapp-logo" aria-hidden="true"><svg><use href="#i-whatsapp-logo"/></svg></i> Escribir por WhatsApp</a>
 </nav>
 
 <main id="contenido">
@@ -106,8 +306,8 @@
         </h1>
         <p class="hero-sub hero-in" style="--i:3">Puertas, cocinas, persianas y muebles. Pintura interior y exterior. Voy a tu casa y me encargo de todo.</p>
         <div class="hero-ctas hero-in" style="--i:4">
-          <a class="btn btn-primary" href="#contacto">Pedir presupuesto <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
-          <a class="btn btn-ghost" href="#trabajos">Ver antes y después</a>
+          <a class="btn btn-primary" href="#contacto">Pedir presupuesto <i class="ico ph-arrow-right" aria-hidden="true"><svg><use href="#i-arrow-right"/></svg></i></a>
+          <a class="btn btn-ghost" href="https://wa.me/34665013139?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20quer%C3%ADa%20pedir%20presupuesto%20para%3A%20" target="_blank" rel="noopener"><i class="ico ph-whatsapp-logo" aria-hidden="true"><svg><use href="#i-whatsapp-logo"/></svg></i> Escribir por WhatsApp</a>
         </div>
       </div>
 
@@ -155,12 +355,12 @@
   <!-- SERVICIOS -->
   <section id="servicios" class="section">
     <div class="wrap">
-      <h2 class="section-title reveal">Lacado de oficio.<br>Y pintura para todo lo demás.</h2>
+      <h2 class="section-title reveal">Lacado de oficio en Mallorca.<br>Y pintura para todo lo demás.</h2>
 
       <div class="bento">
         <article class="tile tile--lacado reveal">
           <div class="tile-body">
-            <i class="ph ph-door tile-icon" aria-hidden="true"></i>
+            <i class="ico ph-door tile-icon" aria-hidden="true"><svg><use href="#i-door"/></svg></i>
             <h3>Lacados</h3>
             <p>Mi especialidad. Imprimación, lijado y laca a pistola para un acabado liso y resistente, en cualquier color RAL o NCS.</p>
             <ul class="pill-list">
@@ -176,7 +376,7 @@
         </article>
 
         <article class="tile tile--pintura reveal">
-          <i class="ph ph-paint-roller tile-icon" aria-hidden="true"></i>
+          <i class="ico ph-paint-roller tile-icon" aria-hidden="true"><svg><use href="#i-paint-roller"/></svg></i>
           <h3>Pintura interior y exterior</h3>
           <p>Paredes, techos, fachadas, barandillas y rejas. Preparo bien la superficie para que el color dure.</p>
         </article>
@@ -223,9 +423,10 @@
           </div>
           <span class="compare-tag compare-tag--after">Después</span>
         </div>
-        <span class="compare-handle" aria-hidden="true"><i class="ph ph-arrows-left-right"></i></span>
+        <span class="compare-handle" aria-hidden="true"><i class="ico ph-arrows-left-right"><svg><use href="#i-arrows-left-right"/></svg></i></span>
         <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
       </div>
+      <p class="inline-cta reveal">¿Tienes puertas o muebles así? Mándame una foto y te digo cómo quedarían. <a href="https://wa.me/34665013139?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20quer%C3%ADa%20pedir%20presupuesto%20para%3A%20" target="_blank" rel="noopener"><i class="ico ph-whatsapp-logo" aria-hidden="true"><svg><use href="#i-whatsapp-logo"/></svg></i> Enviar foto por WhatsApp</a></p>
     </div>
   </section>
 
@@ -237,41 +438,48 @@
 
       <ol class="process" data-process>
         <li class="process-step">
-          <span class="process-icon"><i class="ph ph-house-line" aria-hidden="true"></i></span>
+          <span class="process-icon"><i class="ico ph-house-line" aria-hidden="true"><svg><use href="#i-house-line"/></svg></i></span>
           <h3>Visita y presupuesto</h3>
           <p>Voy a verlo, te asesoro sobre color y acabado y te doy un precio cerrado.</p>
         </li>
         <li class="process-step">
-          <span class="process-icon"><i class="ph ph-screwdriver" aria-hidden="true"></i></span>
+          <span class="process-icon"><i class="ico ph-screwdriver" aria-hidden="true"><svg><use href="#i-screwdriver"/></svg></i></span>
           <h3>Desmontaje</h3>
           <p>Desmonto puertas, frentes o persianas y me los llevo en mi furgoneta.</p>
         </li>
         <li class="process-step">
-          <span class="process-icon"><i class="ph ph-spray-bottle" aria-hidden="true"></i></span>
+          <span class="process-icon"><i class="ico ph-spray-bottle" aria-hidden="true"><svg><use href="#i-spray-bottle"/></svg></i></span>
           <h3>Lacado en taller</h3>
           <p>Lijado, imprimación y laca en un espacio amplio y limpio, sin polvo en tu casa.</p>
         </li>
         <li class="process-step">
-          <span class="process-icon"><i class="ph ph-check-circle" aria-hidden="true"></i></span>
+          <span class="process-icon"><i class="ico ph-check-circle" aria-hidden="true"><svg><use href="#i-check-circle"/></svg></i></span>
           <h3>Montaje y repaso</h3>
           <p>Lo vuelvo a montar, ajusto bisagras y reviso cada pieza contigo.</p>
         </li>
       </ol>
+      <div class="process-cta reveal">
+        <a class="btn btn-primary" href="#contacto">Pedir presupuesto <i class="ico ph-arrow-right" aria-hidden="true"><svg><use href="#i-arrow-right"/></svg></i></a>
+        <span>La visita y el presupuesto no tienen coste.</span>
+      </div>
     </div>
   </section>
 
   <!-- QUIEN -->
   <section class="section manifesto">
     <div class="wrap manifesto-inner">
-      <p class="manifesto-text reveal">Un solo profesional, de la primera visita al último repaso. <span>Quien te da el presupuesto es quien lija, laca y monta. Sin intermediarios ni subcontratas.</span></p>
+      <p class="manifesto-text reveal">Un solo profesional, de la primera visita al último repaso. <span>Quien te da el presupuesto es el mismo que lija, laca y vuelve a montar tus muebles.</span></p>
       <ul class="facts reveal">
-        <li><i class="ph ph-user" aria-hidden="true"></i>Trato directo conmigo</li>
-        <li><i class="ph ph-map-pin" aria-hidden="true"></i>Toda Mallorca, desde Porto Cristo</li>
-        <li><i class="ph ph-van" aria-hidden="true"></i>Furgoneta propia para recoger y entregar</li>
-        <li><i class="ph ph-receipt" aria-hidden="true"></i>Presupuesto sin compromiso</li>
+        <li><i class="ico ph-user" aria-hidden="true"><svg><use href="#i-user"/></svg></i>Trato directo conmigo</li>
+        <li><i class="ico ph-map-pin" aria-hidden="true"><svg><use href="#i-map-pin"/></svg></i>Toda Mallorca, desde Porto Cristo</li>
+        <li><i class="ico ph-van" aria-hidden="true"><svg><use href="#i-van"/></svg></i>Furgoneta propia para recoger y entregar</li>
+        <li><i class="ico ph-receipt" aria-hidden="true"><svg><use href="#i-receipt"/></svg></i>Presupuesto sin compromiso</li>
       </ul>
     </div>
   </section>
+
+  <!-- PENDIENTE: cuando haya reseñas reales en Google Business Profile, añadir aquí 2-3 opiniones
+       (texto literal, nombre y localidad) y el aggregateRating real en el JSON-LD. No inventar. -->
 
   <!-- PREGUNTAS -->
   <section id="preguntas" class="section section--tint">
@@ -279,31 +487,35 @@
       <h2 class="section-title faq-title reveal">Preguntas frecuentes</h2>
       <div class="faq reveal">
         <details>
-          <summary>¿Qué diferencia hay entre lacar y pintar?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <summary>¿Compensa lacar en vez de cambiar la cocina o las puertas?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
+          <p>Normalmente sí. Se conservan los muebles, las bisagras y la instalación, y solo se renueva el acabado, así que suele costar bastante menos que cambiarlos y no hay obra. En la visita te digo si tu caso lo merece.</p>
+        </details>
+        <details>
+          <summary>¿Qué diferencia hay entre lacar y pintar?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>El lacado se aplica a pistola en varias capas sobre una superficie lijada e imprimada. Deja un acabado liso, duro y uniforme, ideal para puertas, cocinas y muebles. La pintura es para paredes, techos y fachadas.</p>
         </details>
         <details>
-          <summary>¿Tengo que desmontar yo las puertas?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <summary>¿Tengo que desmontar yo las puertas?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>No. Yo desmonto las puertas, frentes o persianas, me los llevo al taller y los vuelvo a montar cuando están terminados.</p>
         </details>
         <details>
-          <summary>¿Cuánto tiempo estaré sin las puertas?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <summary>¿Cuánto tiempo estaré sin las puertas?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>Depende de la cantidad de piezas y del acabado. En el presupuesto te indico un plazo concreto para que puedas organizarte.</p>
         </details>
         <details>
-          <summary>¿Puedo elegir cualquier color?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <summary>¿Puedo elegir cualquier color?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>Sí. Trabajo con cartas RAL y NCS y en acabado mate, satinado o brillo. Si lo prefieres, también tiño y barnizo para mantener la veta de la madera.</p>
         </details>
         <details>
-          <summary>¿También pintas exteriores?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <summary>¿También pintas exteriores?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>Sí. Fachadas, paredes exteriores, barandillas, rejas, vallas y carpintería exterior.</p>
         </details>
         <details>
-          <summary>¿En qué zonas trabajas?<i class="ph ph-plus" aria-hidden="true"></i></summary>
-          <p>En toda Mallorca. Tengo la base en Porto Cristo (Manacor) y una furgoneta grande para recoger y devolver puertas, frentes y muebles donde estés.</p>
+          <summary>¿En qué zonas trabajas?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
+          <p>En toda Mallorca: de Porto Cristo y Manacor a Palma, Inca, Alcúdia, Felanitx o Llucmajor. Tengo una furgoneta grande para recoger y devolver puertas, frentes y muebles donde estés.</p>
         </details>
         <details>
-          <summary>¿El presupuesto tiene algún coste?<i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <summary>¿El presupuesto tiene algún coste?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>No. Voy a ver el trabajo y te doy un presupuesto sin compromiso.</p>
         </details>
       </div>
@@ -318,16 +530,16 @@
 
       <!-- PENDIENTE: correo real -->
       <div class="contact-direct reveal">
-        <a class="direct-link" href="https://wa.me/34665013139" target="_blank" rel="noopener">
-          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+        <a class="direct-link" href="https://wa.me/34665013139?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20quer%C3%ADa%20pedir%20presupuesto%20para%3A%20" target="_blank" rel="noopener">
+          <i class="ico ph-whatsapp-logo" aria-hidden="true"><svg><use href="#i-whatsapp-logo"/></svg></i>
           <span><strong>WhatsApp</strong>665 01 31 39</span>
         </a>
         <a class="direct-link" href="tel:+34665013139">
-          <i class="ph ph-phone" aria-hidden="true"></i>
+          <i class="ico ph-phone" aria-hidden="true"><svg><use href="#i-phone"/></svg></i>
           <span><strong>Teléfono</strong>665 01 31 39</span>
         </a>
         <a class="direct-link" href="mailto:hola@pinturasylacadospf.es">
-          <i class="ph ph-envelope-simple" aria-hidden="true"></i>
+          <i class="ico ph-envelope-simple" aria-hidden="true"><svg><use href="#i-envelope-simple"/></svg></i>
           <span><strong>Correo</strong>hola@pinturasylacadospf.es</span>
         </a>
       </div>
@@ -362,23 +574,22 @@
               <option>Pintura exterior</option>
               <option>Otro trabajo</option>
             </select>
-            <i class="ph ph-caret-down" aria-hidden="true"></i>
+            <i class="ico ph-caret-down" aria-hidden="true"><svg><use href="#i-caret-down"/></svg></i>
           </div>
           <span class="field-error" aria-live="polite"></span>
         </div>
         <div class="form-row form-row--full">
-          <label for="contact-message">Mensaje</label>
-          <textarea id="contact-message" name="mensaje" rows="5" required></textarea>
+          <label for="contact-message">Mensaje <span class="optional">(opcional)</span></label>
+          <textarea id="contact-message" name="mensaje" rows="5"></textarea>
           <span class="field-hint">Cuántas piezas son, el color que tienes en mente y la zona donde vives.</span>
           <span class="field-error" aria-live="polite"></span>
         </div>
         <div class="form-row form-row--full form-check">
-          <input id="contact-privacy" name="privacidad" type="checkbox" required>
-          <label for="contact-privacy">He leído y acepto la <a href="politica-privacidad.html">política de privacidad</a>.</label>
+          <label class="check-label" for="contact-privacy"><input id="contact-privacy" name="privacidad" type="checkbox" required><span>He leído y acepto la <a href="politica-privacidad.html">política de privacidad</a>.</span></label>
           <span class="field-error" aria-live="polite"></span>
         </div>
         <div class="form-row form-row--full form-actions">
-          <button class="btn btn-primary" type="submit">Pedir presupuesto <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+          <button class="btn btn-primary" type="submit">Pedir presupuesto <i class="ico ph-arrow-right" aria-hidden="true"><svg><use href="#i-arrow-right"/></svg></i></button>
           <p class="form-status" role="status"></p>
         </div>
       </form>
@@ -391,7 +602,7 @@
     <div class="footer-brand">
       <a class="brand" href="#inicio">
         <span class="brand-mark" aria-hidden="true">PF</span>
-        <span class="brand-text">
+        <span class="brand-text" translate="no">
           <span class="brand-name">Pinturas y Lacados</span>
           <span class="brand-sub">PF</span>
         </span>
@@ -428,10 +639,9 @@
   </div>
 </footer>
 
-<a class="wa-fab" href="https://wa.me/34665013139" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+<a class="wa-fab" href="https://wa.me/34665013139?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20quer%C3%ADa%20pedir%20presupuesto%20para%3A%20" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <i class="ico ph-whatsapp-logo" aria-hidden="true"><svg><use href="#i-whatsapp-logo"/></svg></i>
 </a>
 
-<script src="main.js"></script>
 </body>
 </html>
