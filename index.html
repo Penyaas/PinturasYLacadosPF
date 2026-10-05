@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lacado de puertas, cocinas y muebles y pintura en Mallorca | Pinturas y Lacados PF</title>
 <meta name="description" content="Lacador y pintor autónomo en Mallorca, con base en Porto Cristo (Manacor). Lacado de puertas, cocinas, persianas y muebles en cualquier color RAL, y pintura de interior y exterior. Presupuesto sin compromiso.">
 <!-- PENDIENTE: cambiar el dominio cuando esté comprado (aquí, en las páginas legales, robots.txt y sitemap.xml) -->
@@ -10,7 +10,8 @@
 
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#2A40C9">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3F4F2">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1012">
 <meta name="color-scheme" content="light dark">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,6 +75,7 @@
 
     <div class="header-actions">
       <a class="btn btn-primary btn-sm header-cta" href="#contacto">Pedir presupuesto</a>
+      <a class="header-call" href="tel:+34665013139" aria-label="Llamar al 665 01 31 39"><i class="ph ph-phone" aria-hidden="true"></i></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menú">
         <i class="ph ph-list icon-open" aria-hidden="true"></i>
         <i class="ph ph-x icon-close" aria-hidden="true"></i>
@@ -88,6 +90,7 @@
   <a href="#proceso">Cómo trabajo</a>
   <a href="#preguntas">Preguntas</a>
   <a class="btn btn-primary" href="#contacto">Pedir presupuesto</a>
+  <a class="btn btn-ghost" href="https://wa.me/34665013139" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Escribir por WhatsApp</a>
 </nav>
 
 <main id="contenido">
@@ -337,12 +340,12 @@
 
         <div class="form-row">
           <label for="contact-name">Nombre</label>
-          <input id="contact-name" name="nombre" type="text" autocomplete="name" required>
+          <input id="contact-name" name="nombre" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" required>
           <span class="field-error" aria-live="polite"></span>
         </div>
         <div class="form-row">
           <label for="contact-phone">Teléfono</label>
-          <input id="contact-phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+          <input id="contact-phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" enterkeyhint="next" required>
           <span class="field-error" aria-live="polite"></span>
         </div>
         <div class="form-row form-row--full">

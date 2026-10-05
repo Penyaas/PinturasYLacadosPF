@@ -12,6 +12,7 @@
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Abrir menú");
     navMobile.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
     document.body.style.overflow = "";
   }
 
@@ -21,6 +22,7 @@
       navToggle.setAttribute("aria-expanded", String(open));
       navToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
       navMobile.classList.toggle("is-open", open);
+      document.body.classList.toggle("menu-open", open);
       document.body.style.overflow = open ? "hidden" : "";
     });
     navMobile.querySelectorAll("a").forEach(function (link) {
@@ -153,6 +155,26 @@
     function update() { compare.style.setProperty("--pos", range.value + "%"); }
     range.addEventListener("input", update);
     update();
+
+    /* Arrastre con dedo o ratón en toda la superficie. touch-action: pan-y
+       deja el scroll vertical al navegador. */
+    var dragging = false;
+    function setFromPointer(e) {
+      var rect = compare.getBoundingClientRect();
+      var pct = ((e.clientX - rect.left) / rect.width) * 100;
+      range.value = Math.max(0, Math.min(100, pct));
+      update();
+    }
+    compare.addEventListener("pointerdown", function (e) {
+      if (e.button !== 0) return;
+      dragging = true;
+      compare.setPointerCapture(e.pointerId);
+      setFromPointer(e);
+    });
+    compare.addEventListener("pointermove", function (e) { if (dragging) setFromPointer(e); });
+    function stop() { dragging = false; }
+    compare.addEventListener("pointerup", stop);
+    compare.addEventListener("pointercancel", stop);
   });
 
   /* Línea del proceso: se dibuja al entrar en pantalla */
