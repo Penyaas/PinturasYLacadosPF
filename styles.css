@@ -475,12 +475,13 @@ button, .btn, summary, .swatch, .direct-link, .compare { -webkit-user-select: no
 .compare {
   --pos: 50%;
   position: relative; margin-top: clamp(36px, 5vw, 56px);
-  aspect-ratio: 16 / 8; border-radius: var(--r-card); overflow: hidden;
+  aspect-ratio: 4 / 3; max-width: 880px; border-radius: var(--r-card); overflow: hidden;
   background: #D9DAD5; user-select: none; touch-action: pan-y;
 }
-.compare-layer { position: absolute; inset: 0; display: grid; place-items: center; }
-.compare-before { background: linear-gradient(180deg, #DCD6CB, #C9C1B3); }
-.compare-after { background: linear-gradient(180deg, #E6E8E4, #D3D6D1); clip-path: inset(0 0 0 var(--pos)); }
+.compare-layer { position: absolute; inset: 0; }
+.compare-layer picture, .compare-layer img { display: block; width: 100%; height: 100%; }
+.compare-layer img { object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+.compare-after { clip-path: inset(0 0 0 var(--pos)); }
 
 .compare-tag {
   position: absolute; top: 18px; left: 18px;
@@ -512,59 +513,6 @@ button, .btn, summary, .swatch, .direct-link, .compare { -webkit-user-select: no
 .compare-range:focus-visible ~ .compare-handle i,
 .compare:has(.compare-range:focus-visible) .compare-handle i { outline: 3px solid var(--accent); outline-offset: 2px; }
 
-/* mueble bajo de cocina: tres puertas sobre zócalo */
-.cabinet {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2%;
-  width: 66%; aspect-ratio: 3 / 1.75;
-  padding: 1.2%; border-radius: var(--r-object);
-  position: relative;
-  box-shadow: 0 30px 50px -24px rgba(20, 24, 40, 0.45);
-}
-.cabinet::before { /* encimera */
-  content: ""; position: absolute; left: -3%; right: -3%; top: -7%; height: 7%;
-  border-radius: 2px; background: linear-gradient(180deg, #F2F1EE, #CFCDC7);
-  box-shadow: 0 6px 10px -6px rgba(0, 0, 0, 0.4);
-}
-.cabinet::after { /* zócalo */
-  content: ""; position: absolute; left: 2%; right: 2%; bottom: -8%; height: 8%;
-  background: #2B2C2F;
-}
-.cab-door { position: relative; border-radius: 3px; overflow: hidden; }
-.cab-handle {
-  position: absolute; top: 9%; left: 50%; width: 34%; height: 3.4%; margin-left: -17%;
-  border-radius: 3px;
-  background: linear-gradient(180deg, #E8E9EB, #8E9196);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-}
-
-/* antes: roble barnizado, amarillento y gastado */
-.cabinet--worn { background: #6B4A2B; }
-.cabinet--worn .cab-door {
-  background:
-    linear-gradient(90deg, transparent 47%, rgba(255, 255, 255, 0.35) 48%, transparent 49.5%) 0 0 / 100% 100%,
-    linear-gradient(80deg, transparent 20%, rgba(255, 255, 255, 0.28) 20.6%, transparent 21.4%) 0 0 / 100% 100%,
-    radial-gradient(18% 10% at 72% 82%, rgba(240, 225, 190, 0.6), transparent 70%),
-    radial-gradient(30% 18% at 30% 60%, rgba(60, 35, 15, 0.35), transparent 70%),
-    repeating-linear-gradient(91deg, rgba(70, 40, 15, 0.10) 0 1px, transparent 1px 11px, rgba(70, 40, 15, 0.07) 11px 13px, transparent 13px 23px),
-    linear-gradient(180deg, #B98A4E, #A8763C 60%, #96672F);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18), inset 0 -18px 30px -18px rgba(40, 20, 5, 0.55);
-  filter: saturate(0.85);
-}
-.cabinet--worn .cab-handle { background: linear-gradient(180deg, #B9A88A, #6E6250); }
-
-/* después: lacado verde pálido satinado */
-.cabinet--new { background: #7E9470; }
-.cabinet--new .cab-door {
-  background:
-    linear-gradient(112deg, transparent 25%, rgba(255, 255, 255, 0.22) 38%, transparent 50%),
-    linear-gradient(180deg, #93AA85, #879E79);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-@media (max-width: 640px) {
-  .compare { aspect-ratio: 4 / 3.4; }
-  .cabinet { width: 84%; }
-}
 
 /* ---------- Proceso ---------- */
 .process {

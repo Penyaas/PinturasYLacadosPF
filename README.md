@@ -40,7 +40,7 @@ Busca `PENDIENTE` en el código.
 Ahora mismo la web no usa fotografías: la puerta del inicio, las muestras de color y el mueble de "Antes y después" están hechos con CSS. La imagen para compartir (`assets/og-image.jpg`) es una captura de la portada; cámbiala por una foto real cuando la haya.
 
 Cuando lleguen las fotos reales:
-1. **Antes y después**: sustituir el contenido de `.compare-before` y `.compare-after` por un `<img>` de cada foto (mismo encuadre en las dos). El control deslizante funciona igual.
+1. **Antes y después**: ya usa fotos reales (`assets/img/mueble-salon-antes|despues-{800,1440}.{jpg,webp}`). La foto de antes está alineada sobre la de después con OpenCV (emparejamiento SIFT + transformación afín) para que el deslizador no salte; repetir el mismo proceso con fotos nuevas.
 2. **Galería de trabajos**: añadir una sección nueva después de "Antes y después".
 3. **og:image** (1200x630) para compartir en redes.
 
