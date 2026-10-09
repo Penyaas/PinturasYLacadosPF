@@ -250,7 +250,6 @@ button, .btn, summary, .swatch, .direct-link, .compare { -webkit-user-select: no
 }
 .door[data-finish="mate"] { --sheen: .06; }
 .door[data-finish="satinado"] { --sheen: .28; }
-.door[data-finish="brillo"] { --sheen: .62; }
 
 .door-coat { position: absolute; inset: 0; }
 .door-coat--base { background: var(--coat); }

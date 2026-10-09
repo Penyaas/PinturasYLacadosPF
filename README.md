@@ -49,7 +49,7 @@ Procesarlas con el pipeline de Pillow del proyecto Lacats Amengual (recorte, mej
 
 ## Interacciones
 
-- **Puerta del inicio**: al elegir un color se aplica una "pasada de laca" de arriba abajo. Mate, satinado y brillo cambian el reflejo. Funciona con teclado (flechas).
+- **Puerta del inicio**: al elegir un color se aplica una "pasada de laca" de arriba abajo. Mate y satinado cambian el reflejo. Funciona con teclado (flechas).
 - **Antes y después**: comparador con un `<input type="range">` invisible encima, así funciona con ratón, dedo y teclado.
 - **Cómo trabajo**: la línea entre los pasos se dibuja al aparecer en pantalla.
 - Todo respeta `prefers-reduced-motion`.
