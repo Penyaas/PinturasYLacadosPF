@@ -32,7 +32,6 @@ Busca `PENDIENTE` en el código.
 
 | Dato | Dónde |
 |---|---|
-| Dominio (ahora `pinturasylacadospf.es`) | `canonical` y `og:url` de cada página, `robots.txt`, `sitemap.xml` |
 | Fotos | ver abajo |
 | Reseñas de Google | hueco marcado con `PENDIENTE` antes de las preguntas frecuentes; añadir también `aggregateRating` real al JSON-LD |
 
@@ -65,7 +64,8 @@ Procesarlas con el pipeline de Pillow del proyecto Lacats Amengual (recorte, mej
 - Lighthouse móvil (2026-10-05): rendimiento 97, accesibilidad 100, buenas prácticas 100, SEO 100.
 
 Pendiente:
-1. Dominio + SSL, Search Console, Google Business Profile.
+1. Dominio `lacadospf.es` (comprado en Dondominio el 2026-10-09, a nombre de Antoni Peñas Amengual): DNS en Netlify (zona `6ac91382e9e15d9ca5fff844`), principal `www.lacadospf.es` y `lacadospf.es` redirige.
+2. Search Console y Google Business Profile.
 
 ## Logo
 
