@@ -36,7 +36,7 @@ Trabajo solo, así que quien te da el presupuesto es el mismo que hace el trabaj
 
 ## Imágenes
 
-- Logo: `logo-google-720.png`
+- Logo: `logo-google-1080.jpg` (Google pide un mínimo de 10 KB; el PNG de 720 px pesa menos)
 - Portada: `portada-google-1024x576.jpg` (cámbiala por una foto real de un trabajo en cuanto la haya)
 - Fotos de trabajos: cuantas más y más recientes, mejor; antes/después funciona muy bien.
 
