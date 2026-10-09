@@ -42,7 +42,7 @@
       "@id": "https://www.pinturasylacadospf.es/#negocio",
       "name": "Pinturas y Lacados PF",
       "url": "https://www.pinturasylacadospf.es/",
-      "description": "Lacador y pintor autónomo. Lacado de puertas, cocinas, persianas y muebles, y pintura de interior y exterior en toda Mallorca.",
+      "description": "Lacador y pintor autónomo con más de 10 años de experiencia. Lacado de puertas, cocinas, persianas y muebles, y pintura de interior y exterior en toda Mallorca.",
       "telephone": "+34665013139",
       "priceRange": "€€",
       "address": {
@@ -62,7 +62,8 @@
         "contactType": "customer service",
         "availableLanguage": [
           "es"
-        ]
+        ],
+        "email": "llorensps94@gmail.com"
       },
       "knowsAbout": [
         "Lacado de puertas",
@@ -164,7 +165,26 @@
         ]
       },
       "image": "https://www.pinturasylacadospf.es/assets/og-image.jpg",
-      "logo": "https://www.pinturasylacadospf.es/assets/apple-touch-icon.png"
+      "logo": "https://www.pinturasylacadospf.es/assets/apple-touch-icon.png",
+      "email": "llorensps94@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Llorenç Peñas Santandreu"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "15:00"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -238,6 +258,14 @@
         },
         {
           "@type": "Question",
+          "name": "¿Puedes trabajar por la tarde?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mi horario es de lunes a viernes, de 7:00 a 15:00, pero me adapto a cada trabajo: si hace falta, también trabajo por la tarde."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "¿El presupuesto tiene algún coste?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -257,7 +285,7 @@
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="#inicio">
-      <span class="brand-mark" aria-hidden="true">PF</span>
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect width="48" height="48" rx="11" class="bm-tile"/><path class="bm-glyph" fill-rule="evenodd" transform="translate(-1 0)" d="M13 10H37V15H29.75A8.5 8.5 0 0 1 29.75 22H34V27H18V38H13Z M18 15H22A3.5 3.5 0 0 1 22 22H18Z"/></svg>
       <span class="brand-text" translate="no">
         <span class="brand-name">Pinturas y Lacados</span>
         <span class="brand-sub">PF</span>
@@ -362,7 +390,7 @@
           <div class="tile-body">
             <i class="ico ph-door tile-icon" aria-hidden="true"><svg><use href="#i-door"/></svg></i>
             <h3>Lacados</h3>
-            <p>Mi especialidad. Imprimación, lijado y laca a pistola para un acabado liso y resistente, en cualquier color RAL o NCS.</p>
+            <p>Mi especialidad desde hace más de 10 años. Imprimación, lijado y laca a pistola para un acabado liso y resistente, en cualquier color RAL o NCS.</p>
             <ul class="pill-list">
               <li>Puertas de paso</li><li>Frentes de cocina</li><li>Armarios</li><li>Muebles</li><li>Ventanas</li>
             </ul>
@@ -468,9 +496,9 @@
   <!-- QUIEN -->
   <section class="section manifesto">
     <div class="wrap manifesto-inner">
-      <p class="manifesto-text reveal">Un solo profesional, de la primera visita al último repaso. <span>Quien te da el presupuesto es el mismo que lija, laca y vuelve a montar tus muebles.</span></p>
+      <p class="manifesto-text reveal">Soy Llorenç y trabajo solo, de la primera visita al último repaso. <span>Quien te da el presupuesto es el mismo que lija, laca y vuelve a montar tus muebles.</span></p>
       <ul class="facts reveal">
-        <li><i class="ico ph-user" aria-hidden="true"><svg><use href="#i-user"/></svg></i>Trato directo conmigo</li>
+        <li><i class="ico ph-user" aria-hidden="true"><svg><use href="#i-user"/></svg></i>Más de 10 años en el oficio</li>
         <li><i class="ico ph-map-pin" aria-hidden="true"><svg><use href="#i-map-pin"/></svg></i>Toda Mallorca, desde Porto Cristo</li>
         <li><i class="ico ph-van" aria-hidden="true"><svg><use href="#i-van"/></svg></i>Furgoneta propia para recoger y entregar</li>
         <li><i class="ico ph-receipt" aria-hidden="true"><svg><use href="#i-receipt"/></svg></i>Presupuesto sin compromiso</li>
@@ -515,6 +543,10 @@
           <p>En toda Mallorca: de Porto Cristo y Manacor a Palma, Inca, Alcúdia, Felanitx o Llucmajor. Tengo una furgoneta grande para recoger y devolver puertas, frentes y muebles donde estés.</p>
         </details>
         <details>
+          <summary>¿Puedes trabajar por la tarde?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
+          <p>Mi horario es de lunes a viernes, de 7:00 a 15:00, pero me adapto a cada trabajo: si hace falta, también trabajo por la tarde.</p>
+        </details>
+        <details>
           <summary>¿El presupuesto tiene algún coste?<i class="ico ph-plus" aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary>
           <p>No. Voy a ver el trabajo y te doy un presupuesto sin compromiso.</p>
         </details>
@@ -527,8 +559,8 @@
     <div class="wrap">
       <h2 class="section-title reveal">Cuéntame qué necesitas</h2>
       <p class="section-lead reveal">Te respondo con un presupuesto sin compromiso. Si te va mejor, escríbeme por WhatsApp con un par de fotos.</p>
+      <p class="hours reveal"><strong>Horario:</strong> de lunes a viernes, de 7:00 a 15:00. Si el trabajo lo necesita, también por la tarde.</p>
 
-      <!-- PENDIENTE: correo real -->
       <div class="contact-direct reveal">
         <a class="direct-link" href="https://wa.me/34665013139?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20quer%C3%ADa%20pedir%20presupuesto%20para%3A%20" target="_blank" rel="noopener">
           <i class="ico ph-whatsapp-logo" aria-hidden="true"><svg><use href="#i-whatsapp-logo"/></svg></i>
@@ -538,9 +570,9 @@
           <i class="ico ph-phone" aria-hidden="true"><svg><use href="#i-phone"/></svg></i>
           <span><strong>Teléfono</strong>665 01 31 39</span>
         </a>
-        <a class="direct-link" href="mailto:hola@pinturasylacadospf.es">
+        <a class="direct-link" href="mailto:llorensps94@gmail.com">
           <i class="ico ph-envelope-simple" aria-hidden="true"><svg><use href="#i-envelope-simple"/></svg></i>
-          <span><strong>Correo</strong>hola@pinturasylacadospf.es</span>
+          <span><strong>Correo</strong>llorensps94@gmail.com</span>
         </a>
       </div>
 
@@ -601,7 +633,7 @@
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <a class="brand" href="#inicio">
-        <span class="brand-mark" aria-hidden="true">PF</span>
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect width="48" height="48" rx="11" class="bm-tile"/><path class="bm-glyph" fill-rule="evenodd" transform="translate(-1 0)" d="M13 10H37V15H29.75A8.5 8.5 0 0 1 29.75 22H34V27H18V38H13Z M18 15H22A3.5 3.5 0 0 1 22 22H18Z"/></svg>
         <span class="brand-text" translate="no">
           <span class="brand-name">Pinturas y Lacados</span>
           <span class="brand-sub">PF</span>
@@ -622,7 +654,8 @@
       <h2>Contacto</h2>
       <ul>
         <li><a href="tel:+34665013139">665 01 31 39</a></li>
-        <li><a href="mailto:hola@pinturasylacadospf.es">hola@pinturasylacadospf.es</a></li>
+        <li><a href="mailto:llorensps94@gmail.com">llorensps94@gmail.com</a></li>
+        <li class="footer-note">Lunes a viernes, 7:00 a 15:00</li>
       </ul>
     </div>
     <div class="footer-col">

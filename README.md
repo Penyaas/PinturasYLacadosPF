@@ -19,21 +19,22 @@ Para verla en local: `python -m http.server 8080` y abrir http://localhost:8080.
 
 ## Datos del negocio
 
+- Titular: Llorenç Peñas Santandreu (autónomo), NIF 41.574.884-S
+- Domicilio fiscal: C/ Ponent, 21 A, 07680 Porto Cristo (Manacor). Solo aparece en las páginas legales; en la web y en el JSON-LD figura la localidad, porque trabaja a domicilio.
 - Teléfono y WhatsApp: 665 01 31 39
+- Correo: llorensps94@gmail.com (recibe también los avisos del formulario)
+- Más de 10 años de experiencia. Horario: lunes a viernes de 7:00 a 15:00; por la tarde si el trabajo lo requiere.
 - Zona: toda Mallorca, con base en Porto Cristo (Manacor, 07680). Tiene furgoneta grande para recoger y entregar piezas.
 
 ## Pendiente de datos del cliente
 
-Busca `PENDIENTE` en el código y `class="pending"` en las páginas legales.
+Busca `PENDIENTE` en el código.
 
 | Dato | Dónde |
 |---|---|
-| Correo (ahora `hola@pinturasylacadospf.es`) | `index.html` y `main.js` (`DEST_EMAIL`) |
-| Nombre completo, NIF, dirección fiscal | las tres páginas legales |
 | Dominio (ahora `pinturasylacadospf.es`) | `canonical` y `og:url` de cada página, `robots.txt`, `sitemap.xml` |
 | Fotos | ver abajo |
 | Reseñas de Google | hueco marcado con `PENDIENTE` antes de las preguntas frecuentes; añadir también `aggregateRating` real al JSON-LD |
-| Años de experiencia, horario | opcional: si los da, añadirlos al texto y al JSON-LD (`openingHoursSpecification`) |
 
 ## Fotos
 
@@ -58,10 +59,14 @@ Procesarlas con el pipeline de Pillow del proyecto Lacats Amengual (recorte, mej
 - Netlify: sitio `pinturas-lacados-pf` (id `d3e6570b-15bd-4d07-ab05-f98365a8f65a`), https://pinturas-lacados-pf.netlify.app
 - Despliegue automático: cada push a `main` en GitHub publica la web (sin build, se publica la raíz).
 - Formulario `contacto` registrado en Netlify Forms y probado con un envío real.
+- Aviso por email de cada envío a llorensps94@gmail.com (hook `submission_created`, creado el 2026-10-09).
 - Revisar de vez en cuando la carpeta **Spam** del formulario en Netlify: los envíos marcados como spam no disparan la notificación por email.
 - Cabeceras de seguridad y caché en `netlify.toml`. El distintivo "Built with Netlify" está desactivado (inyectaba un script que la CSP bloquea).
 - Lighthouse móvil (2026-10-05): rendimiento 97, accesibilidad 100, buenas prácticas 100, SEO 100.
 
 Pendiente:
-1. **Crear la notificación por email del formulario**: Netlify guarda los envíos pero no avisa a nadie si no se crea el hook (ver el playbook de Netlify).
-2. Dominio + SSL, Search Console, Google Business Profile.
+1. Dominio + SSL, Search Console, Google Business Profile.
+
+## Logo
+
+`assets/favicon.svg` y el SVG de `.brand-mark` en cada página: silueta de una F cuyo ojo de P queda cerrado entre los dos brazos (P y F fusionadas). Los colores salen de `--accent` / `--on-accent`, así que cambia solo con el modo oscuro.

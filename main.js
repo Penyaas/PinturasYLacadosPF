@@ -198,7 +198,7 @@
   if (form) {
     var statusBox = form.querySelector(".form-status");
     var submitBtn = form.querySelector('button[type="submit"]');
-    var DEST_EMAIL = "hola@pinturasylacadospf.es"; // PENDIENTE: correo real
+    var DEST_EMAIL = "llorensps94@gmail.com";
     var DEST_PHONE = "665 01 31 39";
 
     function setError(field, message) {
