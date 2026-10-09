@@ -1,6 +1,13 @@
 [build]
   publish = "."
 
+# La dirección .netlify.app redirige al dominio propio
+[[redirects]]
+  from = "https://pinturas-lacados-pf.netlify.app/*"
+  to = "https://www.lacadospf.es/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
